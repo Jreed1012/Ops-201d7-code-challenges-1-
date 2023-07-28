@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Script Name:                  My fourth Bash Script
+# Author:                       Jermain Reed
+# Date of latest revision:      7/27/2023
+# Purpose:                      To learn array
+# Declaration of variables
+
+Ops-Challegne-Arrays() {
+    
+# this is my code block 
+
+A= "mkdir"
+
+echo ("$A 1" "$A 2" "$A 3" "$A 4") 
+
+
+   }
+    
+ # variables= ("dir1" "dir2" "dir3" "dir4")
+
+    
+
+# Main
+Ops-Challegne-Arrays
+
+
+End
