@@ -1,0 +1,25 @@
+#!/bin/bash
+#Objective explain 
+
+# Script Name:                  My  Bash Script
+# Author:                       Jermain Reed
+# Date of latest revision:      7/28/2023
+# Purpose:                      Write a function that prints the login 
+# history of users on this computer, followed by the text “This is the 
+# login history”.
+
+# Declaration of variables
+Name="$1"
+# Declaration of functions
+
+Loop() {
+
+    # this is my code block
+    
+
+    test
+
+# Main
+Loop 
+
+# End
