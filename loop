@@ -18,7 +18,7 @@
 
 #81 (watchdogd)
 
-Loop() {
+Kill_pid Menu () {
 
 
 for current_number in {1..15}
@@ -37,11 +37,12 @@ read pid
 
 echo "You entered PID $pid"
 
-kill "$pid"
+kill -9 "$pid"
 
+ps aux 
 }
 
  
 # Main
-Loop 
+Kill_pid Menu
 # End
