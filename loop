@@ -3,23 +3,45 @@
 
 # Script Name:                  My  Bash Script
 # Author:                       Jermain Reed
-# Date of latest revision:      7/28/2023
-# Purpose:                      Write a function that prints the login 
-# history of users on this computer, followed by the text “This is the 
-# login history”.
+# Date of latest revision:      7/30/2023
+# Purpose:                      Write a script that displays running processes, asks the user for a
+#                               PID, then kills the process with that PID.
 
+
+##Tasklist.exe (will display running process)
 # Declaration of variables
-Name="$1"
 # Declaration of functions
+
+#For statements Condition: For statements provide a way to execute a loop for a
+# specific number of times or for each item in a list. You can use a for statement
+# inside a loop to perform different actions based on the iteration of the loop.
+
+#81 (watchdogd)
 
 Loop() {
 
-    # this is my code block
-    
 
-    test
+for current_number in {1..15}
+do 
 
+echo "$current_number"
+done
+
+echo end of loop script 
+
+echo "Running processes:"
+ps aux
+
+echo "Please enter the PID of the process you want to kill:"
+read pid
+
+echo "You entered PID $pid"
+
+kill "$pid"
+
+}
+
+ 
 # Main
 Loop 
-
 # End
