@@ -1,0 +1,70 @@
+#!/bin/bash
+#Objective explain 
+
+# Script Name:                  My Third Bash Script
+# Author:                       Jermain Reed
+# Date of latest revision:      7/31/2023
+# Purpose:                      Conditional 
+# 
+# 
+
+# Declaration of variables
+
+
+# Declaration of functions
+
+# Array to store the grocery list
+Camping_Tools=("Hammock" "Trash bags" "Water" "Rope" "first aid Kit" "Cookware" "Insect Repellent")
+
+# Function to check if an item is in the grocery list
+is_item_in_list() {
+  search_item="$1" # item I am looking for in my list
+  for item in "${Camping_Tools[@]}"; do
+    # check if the item Im searching for is in the array or not
+    if [ "$item" == "$search_item" ]; then
+      return 0 # true - item was found!
+    fi
+  done
+  return 1 # false - item was not found
+}
+
+# Loop to repeatedly ask the user for items to check
+while true; do
+  # ask the user for input of an item to look for in the list
+  read -p "Enter an item to check if it's on your camping tool. (or type 'done' to finish)" item_to_check
+    # item_to_check is a variable that will store the user's input
+
+  # check if the user's input is "done"
+  if [ "$item_to_check" = "done" ]; then
+    break # exit the loop
+  fi
+
+  # check if the item is in the camping tool using the function
+  if is_item_in_list "$item_to_check"; then
+    echo "Item '$item_to_check' is already on your camping tool."
+  else
+    # if the item is not on the list, ask the user if they want to add it
+    read -p "'$item_to_check' is not on your list, do you want to add it? (yes/no)" add_item
+    if [ "$add_item" = "yes" ]; then
+      Camping_Tools+=("$item_to_check")
+      echo "'$item_to_check' added to your camping tool."
+    else
+      echo "'$item_to_check' is not on your camping tool."
+    fi
+  fi
+done
+  
+# Ask the user if they are ready to see their completed camping tool
+read -p "Are you ready to see your completed camping tool list? (yes/no)" show_list
+if [ "$show_list" = "yes" ]; then
+  echo "Your completed camping tool: "
+  echo "${Camping_Tools[@]}"
+else
+  echo "Ok, you can check your list later."
+fi
+Now, the script should work correctly and allow the user to check and update their camping tool as intended.
+
+
+End
+
+
