@@ -1,0 +1,41 @@
+#!/bin/bash
+#Objective explain 
+
+# Script Name:                  My Bash Script
+# Author:                       Jermain Reed
+# Date of latest revision:      8/1/2023
+# Purpose:                      System Information 
+
+
+#
+# Declaration of variables
+# Declaration of functions
+
+
+System Information () {
+
+
+
+
+
+
+}
+
+ 
+# Display information about the computer name
+display_component_info "Computer Name" "-C system -m"
+
+# Display information about the CPU
+display_component_info "CPU" "-C processor -m"
+
+# Display information about RAM
+display_component_info "RAM" "-C memory -m"
+
+# Display information about the Display adapter
+display_component_info "Display Adapter" "-C display -m"
+
+# Display information about the Network adapter
+display_component_info "Network Adapter" "-C network -m"
+
+
+# End
